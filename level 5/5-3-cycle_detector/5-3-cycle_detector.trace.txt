@@ -1,0 +1,53 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r11p1.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Wed Jul 25 12:03:09 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/exam_20180725/lmncube
+
+= Git history ==================================================================
+$> git -C /var/folders/pd/c4b_2rwd61bc2xbbdglx8mm40000gq/T/tmpPFF9Sn/user log --pretty='%H - %an, %ad : %s'
+0725d8fdc7550e2b844efae005389584ae80b860 - Exam 42, Wed Jul 25 11:59:45 2018 +0200 : finished cycle_detector
+133b0d4f77134b9d50f16a879134f76e443cd3f4 - Exam 42, Wed Jul 25 11:41:49 2018 +0200 : bad attempt at biggest_pal
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/pd/c4b_2rwd61bc2xbbdglx8mm40000gq/T/tmpPFF9Sn/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  520 Jul 25 12:03 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 25 12:03 biggest_pal
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 25 12:03 cycle_detector
+
+/var/folders/pd/c4b_2rwd61bc2xbbdglx8mm40000gq/T/tmpPFF9Sn/user/biggest_pal:
+total 8
+-rw-r--r--  1 deepthought  deepthought  567 Jul 25 12:03 biggest_pal.c
+
+/var/folders/pd/c4b_2rwd61bc2xbbdglx8mm40000gq/T/tmpPFF9Sn/user/cycle_detector:
+total 8
+-rw-r--r--  1 deepthought  deepthought  399 Jul 25 12:03 cycle_detector.c
+ 
+= cycle_detector ===============================================================
+$> clang -Wextra -Wall -Werror main.c test_cycle_detector.c cycle_detector.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./62ascxe6ujbenyvepxssj55e
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

@@ -1,0 +1,49 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r13p13.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Wed Jun 27 10:12:19 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/exam_20180627/lmncube
+
+= Git history ==================================================================
+$> git -C /var/folders/dk/r20lvc1x3cq75lyj1m7j60tr0000gq/T/tmpY9Yygl/user log --pretty='%H - %an, %ad : %s'
+bede6fa37b33c4b58ae63f882aff170bc5d04112 - Exam 42, Wed Jun 27 10:09:41 2018 +0200 : Added maff_revalpha
+61b3a1f29a25c2ad845cc2fd7a1131a0b5852222 - Exam 42, Wed Jun 27 10:08:43 2018 +0200 : Added maff_revalpha
+42f0ac3f52a5b76886b978b04f7ce1f1abcb003d - Exam 42, Wed Jun 27 10:06:36 2018 +0200 : Added maff_revalpha
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/dk/r20lvc1x3cq75lyj1m7j60tr0000gq/T/tmpY9Yygl/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  705 Jun 27 10:12 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jun 27 10:12 maff_revalpha
+
+/var/folders/dk/r20lvc1x3cq75lyj1m7j60tr0000gq/T/tmpY9Yygl/user/maff_revalpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  97 Jun 27 10:12 maff_revalpha.c
+ 
+= maff_revalpha ================================================================
+$> clang -Wextra -Wall -Werror maff_revalpha.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./u0u5yoc60pqpl054ibcgy563
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

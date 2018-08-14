@@ -1,0 +1,82 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e6r4p1.vp.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Wed Aug  1 13:31:36 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/exam_20180801/lmncube
+
+= Git history ==================================================================
+$> git -C /var/folders/yd/hb4tvlv120q55tjn1f4q6glc0000gq/T/tmp4_6eKa/user log --pretty='%H - %an, %ad : %s'
+b5255e6e0b1c39c095e784ab74319e45c2fe27ae - Exam 42, Wed Aug 1 13:29:41 2018 +0200 : Finished brackets
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/yd/hb4tvlv120q55tjn1f4q6glc0000gq/T/tmp4_6eKa/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  254 Aug  1 13:31 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Aug  1 13:31 brackets
+
+/var/folders/yd/hb4tvlv120q55tjn1f4q6glc0000gq/T/tmp4_6eKa/user/brackets:
+total 8
+-rw-r--r--  1 deepthought  deepthought  699 Aug  1 13:31 brackets.c
+ 
+= brackets =====================================================================
+$> gcc -Wextra -Wall -Werror brackets.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./v8aed5q4hn1arvoh3z6o21oi '(toto)'
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./t8s9ok6wa7s56h8qe9zzignr '([)]'
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./4bgrs1z6faeiajs3vfi1uvfm '' '{[(0 + 0)(1 + 1)](3*(-1)){()}}'
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./dciyawxggct2wq1i13ayy26s 
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./icts72rvmstyc4geb6yur1sy '()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())'
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./h5q7er35unnfg6gxxfn4e2q4 '()[]{}' '([{}])[({})]{([])}'
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./owfxaj3iro8a7jovhb6m5qlr '(]' '{)' '[}' ')' '}' ')' '(' '{' '['
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./wzvg9pd4ve37gc9awsuy0tdb '({)}' '[()]{}]' '])}' '([{' "(cette (trace n'a pas [de but precis]) {a part embeter (tout le monde)})"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
